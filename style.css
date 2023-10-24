@@ -1,0 +1,353 @@
+:root{
+    --dark-color:#19283F;
+    --green-color:#26CCCC;
+    --grey-color:#EFF7FA;
+}
+
+h2,h3,h4{
+    font-family: 'Cairo', sans-serif;
+}
+body {
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    margin:0;
+    font-size: 1.1rem;
+}
+*{text-transform: capitalize;}
+
+.main-btn {
+    padding:.5rem 1rem;
+}
+
+/*Start Preloader */
+#preloader {
+    position:fixed;
+    background:var(--grey-color);
+    z-index:10;
+    width: 100%;
+    height:100%;
+}
+
+#loadanimate {
+    position:absolute;
+    width:50px;
+    height:50px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%) rotateX(180deg);;
+}
+
+#loadelm {
+    margin:0;
+    margin-right:4%;    
+    float: left;
+    width:16%; 
+    background:black;
+    height:100%;
+    animation: loader 1.5s ease-in infinite backwards;
+}
+#loadelm:nth-child(2){
+    animation-delay: .8s;
+}
+#loadelm:nth-child(3){
+    animation-delay: 1.2s;
+}
+#loadelm:nth-child(4){
+    animation-delay: 1.8s;
+}
+#loadelm:last-child{
+    animation-delay: 2.2s;
+}
+@keyframes loader {
+    0%,100%{
+        height:1%;
+    }
+    50%{
+        height:100%;
+    }
+}
+/* End Preloader */
+
+
+/* start whatsapp*/
+.fix-btn{
+    width:4rem;
+    height:4rem;
+    padding:5px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px; 
+    background-color:#4DC247;
+    border-radius: 100%;
+    z-index:2;
+    animation-duration: 2.5s;
+}
+.fix-btn svg{
+    color:whitesmoke;
+    font-size:4rem;
+}
+.fix-btn span {
+    background-color: #DD0000;
+    right:-5px;
+    top:-5px;
+    margin:1px;
+    color:white;
+    border-radius:50%;
+    width:25px;
+    height:25px;
+}
+/* end whatsapp*/
+
+
+/*Start Navbar */
+nav,footer {
+    background-color: black;
+}
+nav .nav-item .nav-link{
+    color:white;
+}
+.navbar-brand{
+    font-family: 'Alkalami', serif;
+    color:white;
+    font-size: 150%;
+    margin:5px 0;
+}
+nav .nav-item .nav-link.active,nav .nav-item .nav-link:hover ,nav .nav-item .nav-link:focus {
+    color:var(--green-color);
+}
+nav .search{
+    border-right:1px solid var(--green-color);
+}
+nav .search:active{
+    visibility: hidden;
+}
+nav .search svg {
+    color: var(--green-color);
+}
+nav .navbar-toggler {
+    color:white;
+    font-size: 1rem;
+    background-color: white;
+}
+nav .navbar-toggler:focus{
+    box-shadow: none;
+    border:2px solid var(--green-color);
+}
+/* End Navbar */  
+
+/*start landing section*/
+.landing{
+    background-color: transparent;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.landing h1,.landing p{
+    font-family: 'Cairo', sans-serif;
+    animation: title 13s infinite step-end 0s;
+}
+
+@keyframes title {
+    0% {
+        color:black;
+    }
+    39% {
+        color:white;
+    }
+}
+
+@media (max-width: 575px) {
+    .landing h1, .landing p{
+        color:black !important;
+    }
+}
+
+/*End landinf section */
+
+/*Start feature section*/
+.main-title svg {
+    color:var(--green-color);
+    font-size:35px;
+}
+.container .main-title .rule{
+    padding:2px;
+    width:15vh;
+    margin:0 auto;
+    background-color:var(--green-color);
+}
+.features .container .feat svg:last-child{
+    color:var(--green-color);
+    font-size:6vh;
+    bottom:0;
+}
+.features .container .feat svg:first-child{
+    color:grey;
+    opacity:.1;
+    font-size:22vh;
+}
+.features .container .feat svg{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+}
+.features .container h4{
+    color:var(--green-color);
+}
+.features .container .feat .icon-holder {
+    height:200px;
+}
+/* End feature section */
+
+
+/*start our work*/
+.our-work{
+    background-color: var(--grey-color);
+}
+.our-work .classes button {
+    text-transform: capitalize;
+    margin: 0 6px;
+    color:blue;
+}
+.our-work .classes button:hover {
+    color: var(--dark-color);
+}
+.our-work button{
+    border:none;
+}
+.our-work .active{
+    color:white !important;
+    background-color: #0B5ED7;
+}
+.our-work .row .boxe {
+    color:white;
+    position: relative;
+    overflow: hidden;
+    background-color: red;
+}
+.our-work .row .boxe::before {
+    content:attr(data-work);
+    position: absolute;
+    background-color:rgba(51, 153, 255,.6);
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    transition:all .4s ease.1s;
+    transform: translateX(-100%);
+    overflow:hidden;
+}
+.our-work .row .boxe:hover::before{
+    transform: translateX(0);
+}
+/*End our work*/
+
+/*start stuff */
+.stuf .main-title p:last-child{
+    max-width: 65%;
+}
+
+.stuf .row h5 {
+    color:rgb(51, 153, 255);
+}
+/*end stuff */
+
+/**/
+.tech {
+    background-color: black;
+}
+.tech .spc{
+    filter: invert(99%) sepia(64%) saturate(0%) hue-rotate(319deg) brightness(116%) contrast(101%);
+}
+/**/
+.project .container{
+    height:90vh;
+}
+.project {
+    background-color: black;
+}
+/*sStart Blog*/
+
+.blog .row img{
+    height:400px;
+    width:100%;
+}
+
+.blog .row > div .box  {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: all .3s ease-in .1s;
+}
+
+.blog .row > div .box:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: scale(1.03, 1.03);
+}
+/*End Blog*/
+
+/*Start Subscribe */
+.subscribe,.designer{
+    background-color:var(--green-color);
+}
+.subscribe .row input[type="text"]{
+    background-color: transparent;
+    width:100%;
+    border:none;
+    padding:10px;
+    border-bottom: 2px solid white;
+    color:white;
+    transition: all .3s ease 0s;
+}
+.subscribe .row input[type="text"]::placeholder {
+    color:white;
+}
+
+.subscribe .row input[type="text"]:focus {
+    outline:none;
+
+}
+/*End subscribe*/
+
+/*start footer*/
+footer h4{
+    color:#575757;
+    margin-bottom: 20px;
+}
+footer .lst{
+    color:var(--green-color);
+}
+footer * {
+    line-height: 170%;
+}
+footer .row > div:last-of-type ul{
+    display:block;
+}
+footer button {
+    background-color: var(--green-color);
+}
+footer button:hover{
+    background-color:white;
+    color:black;
+}
+footer svg {
+    font-size: 150%;
+    color:var(--green-color);
+}
+footer svg:hover{
+    color:white;
+}
+footer span {
+    color:var(--green-color);
+}
+footer a,.blog a,.designer a{
+    color:inherit;
+    text-decoration: none;
+    transition:.2s all ease 0s;
+}
+footer ul a:hover{
+    color:var(--green-color);
+}
+footer .email{
+    background-color: var(--green-color);
+}
+/*end footer*/
