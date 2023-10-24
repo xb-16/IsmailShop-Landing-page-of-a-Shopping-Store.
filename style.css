@@ -178,7 +178,6 @@ nav .navbar-toggler:focus{
 .features .container .feat svg:last-child{
     color:var(--green-color);
     font-size:6vh;
-    position:absolute;
     bottom:0;
 }
 .features .container .feat svg:first-child{
