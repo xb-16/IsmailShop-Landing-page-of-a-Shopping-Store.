@@ -258,6 +258,7 @@ nav .navbar-toggler:focus{
 .tech {
     background-color: black;
     justify-content:center;
+    align-items:center;
 }
 .tech .spc{
     filter: invert(99%) sepia(64%) saturate(0%) hue-rotate(319deg) brightness(116%) contrast(101%);
